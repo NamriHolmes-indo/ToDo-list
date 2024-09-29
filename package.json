@@ -1,0 +1,23 @@
+{
+  "name": "cakra-jatiwangi-nodejs",
+  "version": "1.0.0",
+  "description": "Versi pertama ini masih hanya untuk personal saja",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NamriTampan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.11.3",
+    "pg": "^8.13.0"
+  }
+}
+

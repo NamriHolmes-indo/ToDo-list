@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('komponen/kepala') -%>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/catatan.css" />
+  </head>
+  <body>
+    <%- include('komponen/navbar') -%>
+    <div class="container">
+      <div class="saved-notes">
+        <h2>Catatan saya:</h2>
+        <ul id="notesList"></ul>
+        <button id="reloadBtn">
+          <img src="/assets/add-button.png" alt="" />
+        </button>
+
+        <script>
+          const reloadBtn = document.getElementById("reloadBtn");
+
+          reloadBtn.addEventListener("click", function () {
+            location.reload();
+          });
+        </script>
+      </div>
+
+      <form action="/simpan" method="POST" id="noteForm">
+        <input type="text" id="title" name="title" required />
+
+        <div class="notes-controller">
+          <select id="font" name="font">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Poppins">Poppins</option>
+          </select>
+
+          <select id="fontSize">
+            <option value="10">10px</option>
+            <option value="12" selected>12px</option>
+            <option value="14">14px</option>
+            <option value="16">16px</option>
+            <option value="18">18px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="30">30px</option>
+            <option value="36">36px</option>
+            <option value="48">48px</option>
+            <option value="64">64px</option>
+            <option value="72">72px</option>
+          </select>
+
+          <button type="button" id="boldBtn">B</button>
+          <button type="button" id="italicBtn">I</button>
+          <button type="button" id="underlineBtn">U</button>
+
+          <div class="kontainer-button">
+            <button type="button" class="align-btn" id="alignLeft">
+              <img src="/assets/align-kiri.png" alt="" />
+            </button>
+            <button type="button" class="align-btn" id="alignCenter">
+              <img src="/assets/align-center.png" alt="" />
+            </button>
+            <button type="button" class="align-btn" id="alignRight">
+              <img src="/assets/align-kanan.png" alt="" />
+            </button>
+            <button type="button" class="align-btn" id="alignJustify">
+              <img src="/assets/align-justify.png" alt="" />
+            </button>
+          </div>
+
+          <button type="submit"><img src="/assets/save.png" alt="" /></button>
+        </div>
+
+        <div class="note" contenteditable="true"></div>
+      </form>
+
+      <div class="gabung-container">
+        <h1>Bergabung untuk integrasi</h1>
+        <a href="#">Masuk</a>
+        <a href="#">Daftar</a>
+      </div>
+    </div>
+
+    <script src="/script/notes.js"></script>
+  </body>
+</html>

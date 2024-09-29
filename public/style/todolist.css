@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Lugrasimo&family=Mochiy+Pop+One&family=Montserrat+Alternates:ital,wght@0,600;0,700;1,700&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&family=Nerko+One&family=Poppins:wght@200;300;400;500;600;700&family=Potta+One&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fca311;
+}
+body nav {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 2vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body nav a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+body nav a h1 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0px;
+  color: #000;
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  body nav a h1 {
+    font-size: 2rem;
+  }
+}
+body nav a img {
+  width: 60px;
+  height: auto;
+}
+
+.container {
+  max-width: 1440px;
+  width: 90%;
+  margin: 50px auto;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.container h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #000;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+.container .container-new-task {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+  .container .container-new-task {
+    padding: 15px 10px;
+  }
+}
+.container .container-new-task input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+}
+.container .container-new-task button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .container-new-task button img {
+  width: 35px;
+}
+.container ul {
+  list-style-type: none;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+  .container ul {
+    margin: 0px;
+  }
+}
+.container ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+  .container ul li {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.container ul li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container ul li button img {
+  height: 25px;
+}
+.container ul li .kontainer-todolist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+  .container ul li .kontainer-todolist {
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+  }
+}
+.container ul li .kontainer-todolist .check-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: gray;
+  transition: color 0.3s;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.container ul li .kontainer-todolist .check-btn.checked {
+  color: green;
+}
+.container ul li .judul-task {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: justify;
+  margin: 0px;
+  color: #000;
+}
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+  .container ul li .judul-task {
+    font-size: 20px;
+  }
+}
+.container ul li .judul-task.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.container ul li .deadline {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin: 0px;
+}
+.container ul li .deadline.on-time {
+  background-color: green;
+  color: #fff;
+}
+.container ul li .deadline.upcoming {
+  background-color: yellow;
+  color: #000;
+}
+.container ul li .deadline.overdue {
+  background-color: red;
+  color: #fff;
+}
+.container ul li .completed-time {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin: 0px 10px;
+}
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+  .container ul li .completed-time {
+    margin: 0px;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=todolist.css.map */

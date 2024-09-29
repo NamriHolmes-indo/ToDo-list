@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <%- include('komponen/kepala') -%>
+    <link rel="stylesheet" href="/style/todolist.css" />
+  </head>
+  <body>
+    <%- include('komponen/navbar') -%>
+    <div class="container">
+      <h1>To Do List</h1>
+      <div class="container-new-task">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Tulis tugas..."
+          required
+        />
+        <input type="date" id="deadlineInput" required />
+        <button id="addTaskButton">
+          <img src="/assets/add-button-black.png" alt="" />
+        </button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+    <script src="/script/todo.js"></script>
+  </body>
+</html>

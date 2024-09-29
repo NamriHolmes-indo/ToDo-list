@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./komponen/kepala") -%>
+    <link rel="stylesheet" href="/style/landing.css" />
+  </head>
+  <body>
+    <%- include('komponen/navbar') -%>
+
+    <main>
+      <section class="container kiri">
+        <h1>Catat, Simpan, dan Ingat!</h1>
+        <h3>
+          Buat catatanmu, atur tugas mu, dan dapatkan pengingat setiap tugasmu.
+        </h3>
+
+        <div class="button-container">
+          <a href="/catatan">Catatan Online</a>
+          <a href="/to-do">To Do List</a>
+        </div>
+      </section>
+
+      <section class="container kanan">
+        <img src="/assets/landing-image.png" alt="" />
+      </section>
+    </main>
+  </body>
+</html>

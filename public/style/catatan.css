@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Lugrasimo&family=Mochiy+Pop+One&family=Montserrat+Alternates:ital,wght@0,600;0,700;1,700&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&family=Nerko+One&family=Poppins:wght@200;300;400;500;600;700&family=Potta+One&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #fca311;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body nav {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 2vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body nav a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+body nav a h1 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0px;
+  color: #000;
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  body nav a h1 {
+    font-size: 2rem;
+  }
+}
+body nav a img {
+  width: 60px;
+  height: auto;
+}
+body .container {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  justify-content: space-between;
+  padding: 5vw 5vh;
+  align-items: flex-start;
+  gap: 3vw;
+  box-sizing: border-box;
+  height: 100%;
+}
+body .container .saved-notes h2 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0px;
+  color: #000;
+}
+body .container .saved-notes #notesList {
+  list-style-type: none;
+  padding-left: 0;
+  min-width: 200px;
+}
+body .container .saved-notes #notesList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: #fca311;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px 1px rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 1px solid #14213d;
+  width: 100%;
+}
+body .container .saved-notes #notesList li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body .container .saved-notes #notesList li div .note-title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+  margin: 0px;
+  color: #000;
+  text-decoration: none;
+}
+body .container .saved-notes #notesList li img {
+  height: 15px;
+  width: auto;
+}
+body .container .saved-notes button {
+  background-color: #fca311;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+}
+body .container .saved-notes button img {
+  height: 35px;
+  width: 35px;
+}
+body .container #noteForm {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+body .container #noteForm #title {
+  width: 100%;
+  background-color: #e5e5e5;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0px;
+  color: #000;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+body .container #noteForm .notes-controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 10px;
+  background-color: #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  max-width: 650px;
+}
+body .container #noteForm .notes-controller select {
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 0.7rem;
+  height: 35px;
+  box-sizing: border-box;
+  border: none;
+}
+body .container #noteForm .notes-controller button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 5px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 1rem;
+}
+body .container #noteForm .notes-controller button img {
+  width: 100%;
+}
+body .container #noteForm .notes-controller .kontainer-button {
+  display: flex;
+  gap: 5px;
+}
+body .container #noteForm .notes-controller .spacer-kotak-hitam {
+  height: 35px;
+  width: 3px;
+  background-color: #000;
+}
+body .container #noteForm .note {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #fff3de;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  cursor: text;
+}
+body .container #noteForm .note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff3de;
+  z-index: -1;
+}
+body .container .gabung-container {
+  display: none;
+}/*# sourceMappingURL=catatan.css.map */
